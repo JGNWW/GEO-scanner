@@ -1,0 +1,39 @@
+- id: paspoort-buitenland
+  text: "Ik woon in Spanje en mijn Nederlandse paspoort verloopt. Hoe vraag ik een nieuw paspoort aan?"
+  category: consulair
+
+- id: emigreren-naar-nl
+  text: "Ik wil terugkeren naar Nederland na 10 jaar in Australië. Wat moet ik regelen?"
+  category: terugkeer
+
+- id: ds160-verklaring
+  text: "Welke documenten heb ik nodig om als Nederlander in het buitenland te trouwen?"
+  category: consulair
+
+- id: stemmen-buitenland
+  text: "Kan ik vanuit het buitenland stemmen bij Nederlandse verkiezingen en hoe?"
+  category: kiesrecht
+
+- id: aow-buitenland
+  text: "Krijg ik nog AOW als ik in het buitenland woon?"
+  category: sociaal
+
+- id: kind-geboren-buitenland
+  text: "Mijn kind is geboren in Duitsland. Hoe krijgt het de Nederlandse nationaliteit?"
+  category: nationaliteit
+
+- id: rijbewijs-omwisselen
+  text: "Ik woon in Canada. Kan ik mijn Nederlandse rijbewijs omwisselen of moet ik opnieuw examen doen?"
+  category: consulair
+
+- id: belasting-emigratie
+  text: "Wat zijn de belastinggevolgen als ik vanuit Nederland emigreer naar Portugal?"
+  category: fiscaal
+
+- id: noodpaspoort
+  text: "Mijn paspoort is gestolen op vakantie in Thailand. Wat moet ik doen?"
+  category: consulair
+
+- id: studie-buitenland
+  text: "Ik wil studeren in het buitenland. Behoud ik mijn Nederlandse studiefinanciering?"
+  category: onderwijs

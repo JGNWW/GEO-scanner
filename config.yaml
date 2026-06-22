@@ -1,0 +1,21 @@
+target:
+  name: NederlandWereldwijd
+  aliases:
+    - Nederland Wereldwijd
+    - nederlandwereldwijd.nl
+  domains:
+    - nederlandwereldwijd.nl
+
+competitors:
+  - name: Rijksoverheid
+    domains: [rijksoverheid.nl]
+  - name: IND
+    domains: [ind.nl]
+  - name: DUO
+    domains: [duo.nl]
+  - name: SVB
+    domains: [svb.nl]
+  - name: Belastingdienst
+    domains: [belastingdienst.nl]
+
+runs_per_prompt: 2

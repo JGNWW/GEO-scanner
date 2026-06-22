@@ -1,0 +1,81 @@
+:root {
+  --bg: #f6f7f9;
+  --fg: #1a1f2e;
+  --muted: #5b6478;
+  --card: #ffffff;
+  --border: #e3e6ec;
+  --accent: #154273;
+  --accent-2: #d52b1e;
+  --ok: #2c8a4a;
+  --warn: #c97a00;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.5;
+}
+
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+header {
+  background: var(--accent);
+  color: white;
+  padding: 32px 0 24px;
+}
+header h1 { margin: 0 0 4px; font-size: 28px; }
+header .sub { margin: 0 0 8px; opacity: 0.9; }
+header .meta { margin: 0; font-size: 13px; opacity: 0.7; }
+header strong { color: white; }
+
+main { padding: 32px 0 64px; }
+
+section { margin-bottom: 40px; }
+section h2 { font-size: 18px; margin: 0 0 12px; color: var(--accent); }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.card .label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+.card .value { font-size: 28px; font-weight: 600; margin-top: 4px; }
+.card .delta { font-size: 12px; color: var(--muted); margin-top: 2px; }
+.card .delta.up { color: var(--ok); }
+.card .delta.down { color: var(--accent-2); }
+
+.chart-box {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  height: 320px;
+}
+.chart-box.small { height: 260px; }
+
+.table-wrap { background: var(--card); border: 1px solid var(--border); border-radius: 8px; overflow: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--border); }
+th { background: #f0f2f6; font-weight: 600; color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+tbody tr:last-child td { border-bottom: 0; }
+
+.pill { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 12px; font-weight: 600; }
+.pill.yes { background: #e1f3e8; color: var(--ok); }
+.pill.no { background: #f5e1e1; color: var(--accent-2); }
+
+#reports { padding-left: 18px; }
+#reports li { margin: 4px 0; }
+
+footer { padding: 24px 0; color: var(--muted); font-size: 13px; border-top: 1px solid var(--border); background: white; }
+footer a { color: var(--accent); }

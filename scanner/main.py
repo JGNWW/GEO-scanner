@@ -1,5 +1,6 @@
 import datetime as dt
 import json
+import shutil
 from pathlib import Path
 
 import yaml
@@ -64,7 +65,28 @@ def main():
         competitors,
         ROOT / "reports" / f"{today}.md",
     )
+    _publish_to_docs()
     print(f"Klaar — rapport: reports/{today}.md")
+
+
+def _publish_to_docs():
+    docs = ROOT / "docs"
+    if not docs.exists():
+        return
+    (docs / "data").mkdir(parents=True, exist_ok=True)
+    (docs / "reports").mkdir(parents=True, exist_ok=True)
+
+    src_csv = ROOT / "data" / "results.csv"
+    if src_csv.exists():
+        shutil.copy2(src_csv, docs / "data" / "results.csv")
+
+    reports_dir = ROOT / "reports"
+    names = []
+    if reports_dir.exists():
+        for p in sorted(reports_dir.glob("*.md")):
+            shutil.copy2(p, docs / "reports" / p.name)
+            names.append(p.name)
+    (docs / "reports.json").write_text(json.dumps(names), encoding="utf-8")
 
 
 if __name__ == "__main__":

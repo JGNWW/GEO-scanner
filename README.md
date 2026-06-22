@@ -35,6 +35,16 @@ Redactie past `prompts.yaml` aan via een pull request. Voeg toe, verwijder of wi
   category: consulair
 ```
 
+## Dashboard
+
+Een statisch HTML-dashboard staat in `docs/`. Zet GitHub Pages aan op deze branch met source `/docs` — dan zie je een live overzicht met trend-grafiek, share-of-voice en de laatste resultaten per prompt. De scanner kopieert data en rapporten bij elke run automatisch naar `docs/`.
+
+Lokaal bekijken:
+
+```bash
+cd docs && python -m http.server 8000
+```
+
 ## Configuratie
 
 `config.yaml` bevat het doeldomein en concurrenten waarop gescoord wordt.

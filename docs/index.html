@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GEO-scanner — NederlandWereldwijd</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>GEO-scanner</h1>
+      <p class="sub">Vindbaarheid van <strong id="target-name">NederlandWereldwijd</strong> in grote taalmodellen</p>
+      <p class="meta" id="meta">Laden…</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="cards" id="cards"></section>
+
+    <section>
+      <h2>Trend over tijd</h2>
+      <div class="chart-box"><canvas id="trend"></canvas></div>
+    </section>
+
+    <section>
+      <h2>Share of voice — laatste scan</h2>
+      <div class="chart-box small"><canvas id="sov"></canvas></div>
+    </section>
+
+    <section>
+      <h2>Per prompt — laatste scan</h2>
+      <div class="table-wrap">
+        <table id="prompt-table">
+          <thead>
+            <tr>
+              <th>Prompt</th>
+              <th>Provider</th>
+              <th>Run</th>
+              <th>Genoemd</th>
+              <th>Geciteerd</th>
+              <th>Concurrent-citations</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>Rapporten</h2>
+      <ul id="reports"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>Bron: <code>data/results.csv</code> · <a href="https://github.com/jgnww/geo-scanner">repository</a></p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -31,7 +31,7 @@ jobs:
         run: |
           git config user.name "geo-scanner-bot"
           git config user.email "geo-scanner-bot@users.noreply.github.com"
-          git add reports/ data/
+          git add reports/ data/ docs/
           if git diff --cached --quiet; then
             echo "Geen wijzigingen"
           else
